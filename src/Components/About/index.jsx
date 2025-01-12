@@ -5,8 +5,6 @@ function About() {
   return (
     <div class="bg-white">
         <Header/>
-      
-
       <div class="lg:min-h-[560px] bg-blue-100 px-4 sm:px-10">
         <div class="max-w-7xl w-full mx-auto py-16">
           <div class="grid lg:grid-cols-2 justify-center items-center gap-10">
