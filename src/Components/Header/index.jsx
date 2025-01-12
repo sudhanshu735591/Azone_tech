@@ -26,6 +26,9 @@ function Header() {
                 Services
               </li>
               <li className="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 dark:text-white">
+                Career
+              </li>
+              <li className="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 dark:text-white">
                 Contact
               </li>
             </ul>

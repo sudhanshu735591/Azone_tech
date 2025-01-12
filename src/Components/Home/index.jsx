@@ -2,7 +2,7 @@ import Footer from "../Footer"
 import Header from "../Header"
 import Body from "./Body"
 import Features from "./Features"
-
+import Performance from "./Performance"
 function Home(){
     return(
         <div className="">
@@ -11,6 +11,7 @@ function Home(){
                 <Body/>
                 <Features/>
             </div>
+            <Performance/>
             <Footer/>
         </div>
     )
