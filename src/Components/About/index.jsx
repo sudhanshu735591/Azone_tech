@@ -785,33 +785,6 @@ function About() {
           </div>
         </div>
       </div>
-
-      <div class="mt-28 px-4 sm:px-10">
-        <div class="max-w-7xl mx-auto bg-gradient-to-r from-teal-700 via-teal-600 to-teal-700 py-16 px-6 relative">
-          <div class="max-w-2xl mx-auto text-center">
-            <h2 class="md:text-4xl text-3xl font-semibold mb-6 text-white">
-              Subscribe to Our Newsletter
-            </h2>
-            <div class="my-6">
-              <p class="text-white">
-                Subscribe to our newsletter and stay up to date with the latest
-                news, updates, and exclusive offers. Get valuable insights. Join
-                our community today!
-              </p>
-            </div>
-            <div class="max-w-2xl left-0 right-0 mx-auto w-full bg-white p-5 flex items-center shadow-lg absolute -bottom-10 rounded-md">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="w-full bg-gray-50 py-3.5 px-4 text-base focus:outline-none"
-              />
-              <button class="bg-black hover:bg-[#222] text-white flex items-center transition-all font-semibold px-5 py-4">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
       <Footer/>
     </div>
   );
