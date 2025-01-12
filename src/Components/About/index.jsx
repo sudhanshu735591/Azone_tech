@@ -1,6 +1,5 @@
 import Footer from "../Footer";
 import Header from "../Header";
-
 function About() {
   return (
     <div class="bg-white">
