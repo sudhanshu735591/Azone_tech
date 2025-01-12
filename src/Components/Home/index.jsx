@@ -1,3 +1,4 @@
+import Footer from "../Footer"
 import Header from "../Header"
 import Body from "./Body"
 import Features from "./Features"
@@ -10,6 +11,7 @@ function Home(){
                 <Body/>
                 <Features/>
             </div>
+            <Footer/>
         </div>
     )
 }
