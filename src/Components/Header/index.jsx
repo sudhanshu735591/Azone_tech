@@ -1,27 +1,34 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 function Header() {
   const [nav, setNav] = useState(false);
   const navigate = useNavigate();
   return (
-    <header>
-      <nav className=" border-gray-200 px-4 lg:px-6 py-2.5 bg-[rgb(8,24,35)] shadow ">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-lg">
+    <header className="relative z-10">
+      <nav className="border-gray-200 px-4 lg:px-6 py-2.5 bg-[rgb(8,24,35)] shadow">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-lg relative">
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            <img src="./logo.png" alt="" />
+            <img src="./logo.png" alt="Logo" />
           </span>
           <div
             className={`flex-col md:flex md:flex-row items-center w-full md:w-auto md:order-2 transition-all duration-300 ${
               nav
-                ? "absolute top-14 left-0 w-full bg-white shadow-md p-4 md:relative md:top-0 md:w-auto md:bg-transparent md:shadow-none"
+                ? "absolute top-14 left-0 w-full bg-white shadow-md p-4 z-50"
                 : "hidden md:flex gap-6"
             }`}
           >
             <ul className="flex flex-col md:flex-row md:gap-8 gap-0 text-black">
-              <li onClick={()=>navigate("/")} className="text-black cursor-pointer block py-2 pr-4 pl-3  rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white">
+              <li
+                onClick={() => navigate("/")}
+                className="text-black cursor-pointer block py-2 pr-4 pl-3 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white"
+              >
                 Home
               </li>
-              <li onClick={()=>navigate("/about")} className="cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white">
+              <li
+                onClick={() => navigate("/about")}
+                className="cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white"
+              >
                 About
               </li>
               <li className="cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white">
@@ -30,7 +37,10 @@ function Header() {
               <li className="cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white">
                 Career
               </li>
-              <li onClick={()=>navigate("/contact")} className="cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white">
+              <li
+                onClick={() => navigate("/contact")}
+                className="cursor-pointer block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-primary-700 md:p-0 lg:text-white"
+              >
                 Contact
               </li>
             </ul>
@@ -38,7 +48,7 @@ function Header() {
               className="cursor-pointer transition duration-150 ease-in-out mt-4 md:mt-0 rounded-full bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
             >
-              Sign Up Nows
+              Sign Up Now
             </button>
           </div>
           <div className="md:hidden flex items-center lg:order-1">
@@ -72,7 +82,7 @@ function Header() {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    d="M3 5a1 1  1H12a1 1  110 2H4a1 1  1-1zM3 10a1 1  1H12a1 1  110 2H4a1 1  1-1zM3 15a1 1  1H12a1 1  110 2H4a1 1  1-1z"
                     clipRule="evenodd"
                   ></path>
                 </svg>
@@ -84,4 +94,4 @@ function Header() {
     </header>
   );
 }
-export default Header;
+export default Header

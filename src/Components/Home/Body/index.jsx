@@ -12,7 +12,8 @@ function Body() {
             className="w-full h-full object-cover"
           ></video>
 
-          <div className="absolute top-0 lg:p-20 p-2">
+          <div className="bg-white">
+              <div className="absolute top-0 lg:p-20 p-2">
             <div class="grid md:grid-cols-2 md:gap-10 gap-6">
               <div class="max-md:order-1 max-md:text-center">
                 <p class="lg:text-4xl text-2xl font-bold text-white">
@@ -46,6 +47,7 @@ function Body() {
                 />
               </div>
             </div>
+          </div>
           </div>
         </div>
         <div className="flex lg:gap-20 flex-wrap lg:flex-nowrap justify-center">
