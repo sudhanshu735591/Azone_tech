@@ -1,6 +1,6 @@
 function Card() {
   return (
-    <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-80">
+    <div class="flex flex-col shadow-sm  rounded-lg my-6 w-80">
       <div class="m-2.5 overflow-hidden rounded-md h-60 flex justify-center items-center">
         <img
           class=" h-full object-cover rounded-full"

@@ -7,7 +7,7 @@ function Home(){
     return(
         <div className="">
             <Header/>
-            <div className="p-10 lg:p-0">
+            <div className="lg:p-0">
                 <Body/>
                 <Features/>
             </div>

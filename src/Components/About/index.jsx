@@ -4,7 +4,7 @@ function About() {
   return (
     <div class="bg-white">
         <Header/>
-      <div class="lg:min-h-[560px] bg-blue-100 px-4 sm:px-10">
+      <div class="lg:min-h-[560px] bg-[rgb(8,24,35)] text-white px-4 sm:px-10">
         <div class="max-w-7xl w-full mx-auto py-16">
           <div class="grid lg:grid-cols-2 justify-center items-center gap-10">
             <div>
@@ -31,19 +31,6 @@ function About() {
                     />
                   </svg>
                 </button>
-                <button class="bg-transparent border-2 border-[#333] flex items-center transition-all font-semibold rounded-md px-5 py-2">
-                  API documentation
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-[14px] fill-current ml-2"
-                    viewBox="0 0 492.004 492.004"
-                  >
-                    <path
-                      d="M484.14 226.886 306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"
-                      data-original="#000000"
-                    />
-                  </svg>
-                </button>
               </div>
             </div>
             <div class="max-lg:mt-12 h-full">
@@ -56,7 +43,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <div class="mt-28 px-4 sm:px-10">
         <div class="max-w-7xl w-full mx-auto">
           <div class="grid lg:grid-cols-2 items-center gap-10">
@@ -65,9 +51,7 @@ function About() {
                 A better way to find engaging content
               </h2>
               <p>
-                Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla
-                officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem
-                ad tempor ut reprehenderit. Eu eu quis anim aute.
+              Discover captivating and relevant content effortlessly with our innovative approach. We streamline your search, delivering personalized, engaging material that resonates with your audience. Whether for inspiration, marketing, or growth, our solutions ensure you find content that sparks interest, drives interaction, and keeps your audience hooked. Elevate your content game today!
               </p>
               <button class="bg-black hover:bg-[#222] text-white flex items-center transition-all font-semibold rounded-md px-5 py-4 mt-8">
                 Learn more
@@ -198,7 +182,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <div class="px-4 sm:px-10 mt-28">
         <div class="max-w-7xl w-full mx-auto">
           <div class="grid md:grid-cols-2 items-center gap-10">
@@ -214,13 +197,8 @@ function About() {
                 Fresh Ideas for your business design
               </h2>
               <p>
-                Veniam proident aute magna anim excepteur et ex consectetur
-                velit ullamco veniam minim aute sit. Elit occaecat officia et
-                laboris Lorem minim. Officia do aliqua adipisicing ullamco in.
-                anim excepteur et ex consectetur velit ullamco veniam minim aute
-                sit.
+              Transform your business with innovative design solutions that reflect creativity, functionality, and uniqueness. Our expert team crafts compelling visuals and user-centric designs tailored to your brand identity and goals. With fresh ideas and a forward-thinking approach, we help your business stand out, captivate your audience, and drive meaningful engagement. Elevate your brand with designs that inspire growth and success.
               </p>
-
               <div class="mt-8">
                 <div class="flex items-center">
                   <img
@@ -243,7 +221,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <div class="px-4 sm:px-10 mt-28">
         <div class="max-w-7xl w-full mx-auto grid md:grid-cols-2 justify-center items-center gap-10">
           <div>
@@ -251,10 +228,7 @@ function About() {
               100% Secure your data
             </h2>
             <p>
-              Veniam proident aute magna anim excepteur et ex consectetur velit
-              ullamco veniam minim aute sit. Elit occaecat officia et laboris
-              Lorem minim. Officia do aliqua adipisicing ullamco in. consectetur
-              velit ullamco veniam minim aute sit.
+            Protect your valuable data with advanced security solutions designed to ensure confidentiality, integrity, and reliability. Our robust systems safeguard your information from threats, breaches, and unauthorized access, giving you complete peace of mind. With cutting-edge encryption, regular monitoring, and compliance with industry standards, we ensure your data stays 100% secure at all times. Trust us to protect what matters most.
             </p>
             <button class="bg-black hover:bg-[#222] text-white flex items-center transition-all font-semibold rounded-md px-5 py-4 mt-8">
               Read more
@@ -279,17 +253,13 @@ function About() {
           </div>
         </div>
       </div>
-
       <div class="mt-28 px-4 sm:px-10 bg-blue-100">
         <div class="min-h-[400px] relative h-full max-w-2xl mx-auto flex flex-col justify-center items-center text-center px-6 py-16">
           <h2 class="md:text-4xl text-3xl font-semibold mb-6">
             Your work, everywhere you are
           </h2>
           <p>
-            Veniam proident aute magna anim excepteur et ex consectetur velit
-            ullamco veniam minim aute sit. Elit occaecat officia et laboris
-            Lorem minim. Officia do aliqua adipisicing ullamco in. consectetur
-            velit ullamco veniam minim aute sit.
+          Stay connected and productive no matter where you go. With seamless access to your tasks, projects, and tools, our solutions empower you to work efficiently from any location. Whether you're in the office, at home, or on the move, your work is always within reach, ensuring flexibility, convenience, and uninterrupted progress.
           </p>
           <button class="bg-black hover:bg-[#222] text-white flex items-center transition-all font-semibold rounded-md px-5 py-4 mt-8">
             Get started
@@ -306,8 +276,7 @@ function About() {
           </button>
         </div>
       </div>
-
-      <div class="px-4 sm:px-10 mt-28">
+      {/* <div class="px-4 sm:px-10 mt-28">
         <div class="max-w-7xl mx-auto">
           <div>
             <h2 class="md:text-4xl text-3xl font-bold">
@@ -386,8 +355,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
-
+      </div> */}
       <div class="px-4 sm:px-10 mt-28">
         <div class="max-w-7xl w-full mx-auto">
           <div class="grid md:grid-cols-3 gap-4">
@@ -619,7 +587,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <div class="mt-28 px-4 sm:px-10">
         <div class="max-w-7xl mx-auto space-y-6">
           <div class="mb-10">
@@ -789,3 +756,41 @@ function About() {
   );
 }
 export default About;
+
+
+
+
+
+
+
+
+
+// What services do you offer?
+// We provide a range of solutions, including web design, development, security, and performance optimization tailored to your business needs.
+
+// How secure is my data with your services?
+// Your data is 100% secure. We use advanced encryption, regular monitoring, and strict compliance measures to safeguard your information.
+
+// Can I customize your solutions to fit my needs?
+// Absolutely! Our services are designed to be flexible, allowing full customization to match your unique business requirements.
+
+// Do you offer support after implementation?
+// Yes, we provide ongoing support to ensure everything runs smoothly and any issues are resolved promptly.
+
+// How can I get started?
+// Simply contact us through our website or reach out to our support team. We’ll guide you through the entire process.
+
+// What industries do you serve?
+// Our solutions cater to a variety of industries, including retail, technology, healthcare, finance, and more.
+
+// Are your services scalable for growing businesses?
+// Yes, our solutions are designed to grow with your business, ensuring scalability and adaptability as your needs evolve.
+
+// How do you ensure performance optimization?
+// We use advanced tools and strategies to analyze and enhance system performance, ensuring speed, reliability, and efficiency.
+
+// Do you offer a demo or trial period?
+// Yes, we provide demos or trials for certain services to help you evaluate our solutions before committing.
+
+// What makes your solutions different from others?
+// Our focus on innovation, customization, and exceptional customer support sets us apart, delivering unmatched value to your business.

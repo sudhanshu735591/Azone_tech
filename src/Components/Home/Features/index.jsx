@@ -4,7 +4,7 @@ function Features(){
       <div class="grid md:grid-cols-2 items-center md:gap-8 gap-6">
         <div class="max-md:order-1 max-md:text-center z-50 relative">
           <h2 class="text-gray-800 lg:text-6xl md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[56px]"><span class="text-blue-600">Smart</span> Business with <span class="text-blue-600">Smart</span> People</h2>
-          <p class="text-gray-600 mt-6 text-base leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
+          <p class="text-gray-600 mt-6 text-base leading-relaxed">Empowering visionary businesses with innovative web solutions designed for dynamic teams. Elevate your online presence, attract your audience, and drive growth with smart strategies. Let’s build smarter, together!</p>
 
           <button type='button'
             class="mt-6 bg-blue-600 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all text-white font-semibold text-sm tracking-wide rounded-md px-6 py-2.5">Get Started</button>
@@ -12,15 +12,15 @@ function Features(){
           <div class="mt-12">
             <div class="grid sm:grid-cols-3 gap-4 items-center">
               <div class="flex flex-col items-center text-center">
-                <h5 class="text-gray-800 font-bold text-xl mb-2">10+</h5>
+                <h5 class="text-gray-800 font-bold text-xl mb-2">8+</h5>
                 <p class="text-gray-600">Years Experience</p>
               </div>
               <div class="flex flex-col items-center text-center">
-                <h5 class="text-gray-800 font-bold text-xl mb-2">890</h5>
+                <h5 class="text-gray-800 font-bold text-xl mb-2">250</h5>
                 <p class="text-gray-600">Cases Solved</p>
               </div>
               <div class="flex flex-col items-center text-center">
-                <h5 class="text-gray-800 font-bold text-xl mb-2">250</h5>
+                <h5 class="text-gray-800 font-bold text-xl mb-2">50</h5>
                 <p class="text-gray-600">Business Partners</p>
               </div>
             </div>
@@ -28,7 +28,7 @@ function Features(){
         </div>
 
         <div class="lg:h-[550px] md:h-[550px] flex items-center relative max-md:before:hidden before:absolute before:bg-[#DEE2E5] before:h-[120%] before:w-[120%] before:right-0 before:z-0">
-          <img src="https://readymadeui.com/team-3.webp" class="rounded-md lg:w-4/5 z-50 relative" alt="Dining Experience" />
+          <img  src="https://cdn.dribbble.com/users/1124806/screenshots/4871258/ezgif.com-optimize.gif" class="rounded-md lg:w-full z-50 relative" alt="Dining Experience" />
         </div>
       </div>
 
@@ -40,7 +40,6 @@ function Features(){
           </svg>
           <h3 class="text-gray-800 text-xl font-bold mb-2">Customization</h3>
           <p class="text-sm text-gray-600">Tailor our product to suit your needs.</p>
-          <a href="javascript:void(0);" class="text-blue-600 font-bold inline-block text-sm hover:underline mt-4">Learn more</a>
         </div>
         <div class="bg-white p-6 shadow rounded-md">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-11 h-11 mb-4 inline-block bg-blue-100 p-3 rounded-md" viewBox="0 0 512.001 512.001">
@@ -48,7 +47,6 @@ function Features(){
           </svg>
           <h3 class="text-gray-800 text-xl font-bold mb-2">Support</h3>
           <p class="text-sm text-gray-600">24/7 customer support for all your inquiries.</p>
-          <a href="javascript:void(0);" class="text-blue-600 font-bold inline-block text-sm hover:underline mt-4">Learn more</a>
         </div>
         <div class="bg-white p-6 shadow rounded-md">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-11 h-11 mb-4 inline-block bg-blue-100 p-3 rounded-md" viewBox="0 0 24 24">
@@ -60,7 +58,6 @@ function Features(){
           </svg>
           <h3 class="text-gray-800 text-xl font-bold mb-2">Performance</h3>
           <p class="text-sm text-gray-600">Experience blazing-fast performance with our product.</p>
-          <a href="javascript:void(0);" class="text-blue-600 font-bold inline-block text-sm hover:underline mt-4">Learn more</a>
         </div>
       </div>
     </div>

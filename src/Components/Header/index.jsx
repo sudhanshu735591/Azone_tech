@@ -5,7 +5,7 @@ function Header() {
   const navigate = useNavigate();
   return (
     <header>
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 shadow ">
+      <nav className=" border-gray-200 px-4 lg:px-6 py-2.5 bg-[rgb(8,24,35)] shadow ">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-lg">
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             <img src="./logo.png" alt="" />
