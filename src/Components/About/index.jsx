@@ -3,7 +3,7 @@ import Header from "../Header";
 function About() {
   return (
     <div class="bg-white">
-        <Header/>
+        <Header bgColor = "rgb(8,24,35)"/>
       <div class="lg:min-h-[560px] bg-[rgb(8,24,35)] text-white px-4 sm:px-10">
         <div class="max-w-7xl w-full mx-auto py-16">
           <div class="grid lg:grid-cols-2 justify-center items-center gap-10">

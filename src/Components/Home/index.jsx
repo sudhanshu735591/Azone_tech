@@ -11,6 +11,7 @@ function Home(){
                 <Body/>
                 <Features/>
             </div>
+            
             <Performance/>
             <Footer/>
         </div>
