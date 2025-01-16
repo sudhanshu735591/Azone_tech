@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     screens: {
-      'below-xs': { max: '300px' },
+      'below-xs': { max: '375px' },
       'xs': '480px',    // Extra small screens
       'sm': '640px',    // Small screens
       'md': '768px',    // Medium screens
