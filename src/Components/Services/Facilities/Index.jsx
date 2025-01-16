@@ -1,13 +1,11 @@
 function Facilities() {
   return (
-    <div className="relative">
-      <div>
+    <div className="relative ">
         <img
           className="min-h-screen lg:h-screen w-full object-cover"
           src="https://media-public.canva.com/McoUM/MAEPSeMcoUM/1/s2.jpg"
           alt="Background"
         />
-      </div>
       <div className="absolute top-0 w-full">
         <section className="mt-10 lg:mt-20 px-8">
           <h2 className="text-2xl lg:text-5xl font-bold text-center mb-5 text-white">
@@ -18,8 +16,8 @@ function Facilities() {
             We always do our best in serving our customers and give them a satisfied impression.
           </p>
         </section>
-        <div className="flex flex-col gap-10 mt-10 px-5 lg:px-0">
-          <div className="m-auto lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <div className="flex flex-col gap-20 lg:gap-10 mt-10 px-5 lg:px-0">
+          <div className="m-auto lg:w-[60%] flex justify-around gap-10">
             <div className="flex flex-col gap-2 items-center text-center">
               <img
                 className="rounded-full lg:h-20 lg:w-20 h-10"
@@ -39,7 +37,7 @@ function Facilities() {
               <p className="text-white">Made relation to other people.</p>
             </div>
           </div>
-          <div className="m-auto lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="m-auto lg:w-[60%] flex justify-around ">
             <div className="flex flex-col gap-2 items-center text-center">
               <img
                 className="rounded-full lg:h-20 lg:w-20 h-10"
@@ -47,7 +45,7 @@ function Facilities() {
                 alt="Strategy"
               />
               <p className="text-[rgb(243,157,36)] text-xl lg:text-2xl font-semibold">STRATEGY</p>
-              <p className="text-white">We have great market tactics.</p>
+              <p className="text-center  w-[80%] text-white">We have great market tactics.</p>
             </div>
             <div className="flex flex-col gap-2 items-center text-center">
               <img
@@ -56,7 +54,7 @@ function Facilities() {
                 alt="Target"
               />
               <p className="text-[rgb(243,157,36)] text-xl lg:text-2xl font-semibold">TARGET</p>
-              <p className="text-white">Made relation to other people.</p>
+              <p className="text-center  w-[80%] text-white">Made relation to other people.</p>
             </div>
           </div>
         </div>
