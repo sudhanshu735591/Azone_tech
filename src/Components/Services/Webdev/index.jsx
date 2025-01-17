@@ -20,17 +20,17 @@ const WebDevelopmentServices = () => {
                 <span className="text-[rgb(0,210,98)]">Own</span> the change
               </h2>
               <p className="lg:mt-10 lg:text-xl text-base text-white leading-relaxed">
-                At <span className="text-yellow-400 font-semibold">AZONE</span>,
-                we specialize in creating digital solutions that go beyond
-                expectations. With a deep understanding of the ever-evolving web
-                development landscape, we combine creativity and technical
-                expertise to deliver websites that are visually stunning, highly
-                functional, and tailored to meet your unique business goals. Our
-                team is committed to crafting responsive designs that provide
-                seamless experiences across devices while ensuring every site is
-                optimized for performance and visibility. By partnering with us,
-                you gain a reliable ally dedicated to elevating your online
-                presence and driving meaningful results for your brand.
+                At <span className="text-yellow-400 font-semibold">AZONE</span>, we specialize in creating digital
+                solutions that go beyond expectations. With a deep
+                understanding of the ever-evolving web development landscape, we
+                combine creativity and technical expertise to deliver websites
+                that are visually stunning, highly functional, and tailored to
+                meet your unique business goals. Our team is committed to
+                crafting responsive designs that provide seamless experiences
+                across devices while ensuring every site is optimized for
+                performance and visibility. By partnering with us, you gain a
+                reliable ally dedicated to elevating your online presence and
+                driving meaningful results for your brand.
               </p>
             </div>
             <div className="lg:w-[80%] w-[70%]">

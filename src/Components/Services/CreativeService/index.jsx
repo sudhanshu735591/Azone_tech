@@ -1,7 +1,7 @@
 import React from 'react';
 const CreativeServices = () => {
   return (
-    <div className="lg:h-screen bg-gradient-to-r from-blue-500 via-black to-blue-900  text-white p-8 font-sans">
+    <div className="bg-gradient-to-r from-gray-500 via-black to-blue-500 lg:h-screen text-white p-8 font-sans">
       <div className="max-w-6xl mx-auto">
         <header className="text-start mb-10">
           <h1 className="text-6xl font-semibold">Creative Services</h1>

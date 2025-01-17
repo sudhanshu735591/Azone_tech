@@ -12,7 +12,7 @@ function Facilities() {
           <h2 className="text-2xl lg:text-5xl font-bold text-center mb-5 text-white">
             OUR BEST <span className="text-[rgb(243,157,36)]">SERVICES</span>
           </h2>
-          <div className=" w-40 border-[rgb(243,157,36)] m-auto"></div>
+          <div className="w-40 border-[rgb(243,157,36)] m-auto"></div>
           <p className="text-white text-center mt-5 lg:text-2xl lg:w-1/2 m-auto">
             We always do our best in serving our customers and give them a satisfied impression.
           </p>
