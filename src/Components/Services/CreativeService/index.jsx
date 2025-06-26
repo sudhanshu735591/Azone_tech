@@ -1,91 +1,61 @@
 import React from 'react';
 const CreativeServices = () => {
-  return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-blue-500 lg:h-screen text-white p-8 font-sans">
-      <div className="max-w-6xl mx-auto">
-        <header className="text-start mb-10">
-          <h1 className="text-6xl font-semibold">Creative Services</h1>
-          <p className="mt-4">CHOOSE A PLAN THAT'S RIGHT FOR YOU.</p>
-        </header>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white text-blue-900 rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-bold">Design Essentials</h2>
-            <p className="text-gray-700 mt-4">Quickly and easily meet your core design needs</p>
-            <ul className="mt-6 space-y-2">
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> eBook & digital reports
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Illustration design
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Presentation design
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Motion design
-              </li>
-              <li className="flex items-center">
-                <span className="text-red-500 mr-2">✖</span> Campaign concepting
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <p className="text-4xl font-bold text-purple-700">$800</p>
-              <p className="text-gray-500">/month</p>
-            </div>
+ return(
+  <div className="relative bg-white min-h-screen p-10 pt-0 text-white">
+      <div>
+           <svg
+        className="absolute top-0 left-0 w-full h-full z-0"
+        viewBox="0 0 1440 320"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="none"
+          stroke="#6a0dad" 
+          strokeWidth="20"
+          d="M0,256 C480,32 960,480 1440,256" 
+        />
+      </svg>
+      </div>
+      <div className="relative z-10 flex flex-col md:flex-row gap-10 md:gap-80">
+        <div>
+          <div className="md:sticky md:top-20">
+            <h1 className="text-5xl md:text-6xl text-blue-800 mt-10">
+              Our Offerings at a{" "}
+              <span className="font-dancing text-6xl md:text-6xl text-yellow-300 font-semibold">
+                Glance.
+              </span>
+            </h1>
           </div>
-          <div className="bg-white text-blue-900 rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-bold">End-to-End Creative</h2>
-            <p className="text-gray-700 mt-4">Full-service creative for everything you need</p>
-            <ul className="mt-6 space-y-2">
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> eBook & digital reports
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Illustration design
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Presentation design
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Motion design
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Campaign concepting
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <p className="text-4xl font-bold text-purple-700">$1500</p>
-              <p className="text-gray-500">/month</p>
-            </div>
+        </div>
+        <div className="md:w-2/3 flex flex-col gap-10">
+          <div className="flex flex-col gap-5 text-start font-montserrat">
+            <h2 className="text-3xl md:text-4xl font-playwright text-blue-800 mt-10">
+              Personalized Guidance
+            </h2>
+            <p className="text-lg md:text-2xl text-black">
+            We provide personalized guidance tailored to each student's individual strengths, weaknesses, and career goals. Our mentors offer continuous support throughout the course, helping students stay on track, overcome challenges, and build the confidence needed to succeed in interviews and real-world scenarios.
+            </p>
           </div>
-          <div className="bg-white text-blue-900 rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-bold">Digital Advertising</h2>
-            <p className="text-gray-700 mt-4">Creative service for growth and performance marketing</p>
-            <ul className="mt-6 space-y-2">
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> eBook & digital reports
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-500 mr-2">✔</span> Illustration design
-              </li>
-              <li className="flex items-center">
-                <span className="text-red-500 mr-2">✖</span> Presentation design
-              </li>
-              <li className="flex items-center">
-                <span className="text-red-500 mr-2">✖</span> Motion design
-              </li>
-              <li className="flex items-center">
-                <span className="text-red-500 mr-2">✖</span> Campaign concepting
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <p className="text-4xl font-bold text-purple-700">$500</p>
-              <p className="text-gray-500">/month</p>
-            </div>
+          <div className="flex flex-col gap-5 text-start">
+            <h2 className="text-3xl md:text-4xl font-playwright text-blue-800">
+            Interview Preparation
+            </h2>
+            <p className="text-lg md:text-2xl text-black">
+            We offer comprehensive interview preparation, including mock interviews, resume building, and personalized feedback. Our goal is to equip students with the confidence, communication skills, and technical knowledge needed to succeed in job interviews and secure their desired roles.
+            </p>
+          </div>
+          <div className="flex flex-col gap-5 text-start">
+            <h2 className="text-3xl md:text-4xl font-playwright text-blue-800">
+            Skill-Based Responsibility
+            </h2>
+            <p className="text-lg md:text-2xl text-black">
+            We assign responsibilities based on each student’s current skills and knowledge level, ensuring they work on tasks that match their capabilities. This approach promotes effective learning, builds confidence, and helps individuals grow at their own pace while gaining practical experience.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  );
+ )
 };
 export default CreativeServices;

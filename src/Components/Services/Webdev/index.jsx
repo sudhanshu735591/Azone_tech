@@ -1,5 +1,19 @@
 import React from "react";
 const WebDevelopmentServices = () => {
+  const data = [
+    {
+      heading: "Personalized Guidance",
+      img: "https://i.gifer.com/origin/71/711557abfeed55bc0ebc5185168147c6.gif",
+    },
+    {
+      heading: "Interview Preparation",
+      img: "https://digitalscholar.in/wp-content/uploads/2022/06/Inbound-Marketing-Manager.gif",
+    },
+    {
+      heading: "Skill-Based Responsibility",
+      img: "https://cdn.dribbble.com/users/1519660/screenshots/9809330/media/6cac76b4cb5fdd9085989daecdfa1318.gif",
+    },
+  ];
   return (
     <div>
       <div className="relative lg:h-screen h-auto">
@@ -11,35 +25,36 @@ const WebDevelopmentServices = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
         ></video>
         <div className="relative p-5 lg:p-10">
-          <p className="lg:text-6xl text-4xl font-bold text-white text-center">
+          <p className="lg:text-6xl text-4xl font-SEMIbold text-white text-center uppercase">
             Why We Are
           </p>
-          <div className="flex lg:w-[80%] flex-wrap lg:flex-nowrap m-auto justify-center md:gap-10 gap-6">
-            <div className="text-center lg:text-left lg:w-full p-5">
-              <h2 className="text-white font-semibold md:text-5xl lg:text-6xl lg:mt-10 mt-5 text-2xl mb-4 md:leading-[55px]">
-                <span className="text-[rgb(0,210,98)]">Own</span> the change
-              </h2>
-              <p className="lg:mt-10 lg:text-xl text-base text-white leading-relaxed">
-                At <span className="text-yellow-400 font-semibold">AZONE</span>, we specialize in creating digital
-                solutions that go beyond expectations. With a deep
-                understanding of the ever-evolving web development landscape, we
-                combine creativity and technical expertise to deliver websites
-                that are visually stunning, highly functional, and tailored to
-                meet your unique business goals. Our team is committed to
-                crafting responsive designs that provide seamless experiences
-                across devices while ensuring every site is optimized for
-                performance and visibility. By partnering with us, you gain a
-                reliable ally dedicated to elevating your online presence and
-                driving meaningful results for your brand.
-              </p>
-            </div>
-            <div className="lg:w-[80%] w-[70%]">
-              <img
-                src="https://www.netguru.com/hs-fs/hubfs/_N19%20Modules/Homepage/Illustrations/02_design.png?width=1800&height=1800&name=02_design.png"
-                className="rounded-lg"
-                alt="Design Illustration"
-              />
-            </div>
+          <div className="flex flex-wrap lg:flex-nowrap m-auto  md:gap-10 gap-6 text-white mt-10 text-2xl">
+            <p>
+              Our primary objective is not merely to ensure the completion of
+              the course, but to empower each individual by assigning
+              responsibilities aligned with their current skill level and
+              knowledge. We carefully evaluate every student through a thorough
+              assessment process before enrollment to ensure they are placed
+              appropriately. Throughout the course, we provide personalized
+              guidance to support their learning journey. Additionally, upon
+              successful completion of the program, we offer dedicated
+              assistance for interview preparation, equipping our students with
+              the tools and confidence they need to succeed in their careers.
+              Our commitment lies in holistic development and long-term success
+              of every learner.
+            </p>
+          </div>
+          <div className="flex gap-6 sm:gap-8 lg:gap-10 justify-between flex-wrap">
+            {data.map((val) => {
+              return (
+                <div className="w-full sm:w-[300px] lg:w-[400px] text-start p-5 gap-5 flex flex-col">
+                  <h1 className="text-xl sm:text-2xl font-bold text-yellow-300">
+                    {val.heading}
+                  </h1>
+                  <img src={val.img} className="w-full rounded-2xl" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

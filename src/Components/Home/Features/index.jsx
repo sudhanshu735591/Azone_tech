@@ -26,15 +26,17 @@ function Features() {
       <div>
         <div className="grid md:grid-cols-2 items-center md:gap-8 gap-6">
           <div className="max-md:order-1 max-md:text-center z-50 relative">
-            <h2 className="text-gray-800 lg:text-6xl md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[56px]">
-              <span className="text-blue-600">Smart</span> Business with{" "}
-              <span className="text-blue-600">Smart</span> People
+            <h2 className="text-gray-800 lg:text-5xl md:text-5xl text-3xl font-bold mb-4 md:!leading-[56px]">
+              <span className="text-blue-600">Smart</span> Technology with{" "}
+              <span className="text-blue-600">expert</span> Instructors
             </h2>
-            <p className="text-gray-600 mt-6 text-base leading-relaxed">
-              Empowering visionary businesses with innovative web solutions
-              designed for dynamic teams. Elevate your online presence, attract
-              your audience, and drive growth with smart strategies. Let’s build
-              smarter, together!
+            <p className="text-gray-600 mt-6 text-lg leading-relaxed">
+              At AZONE, we combine smart technology with expert instructors to
+              deliver a powerful, future-ready learning experience. Our courses
+              are designed to equip students with real-world skills, guided by
+              industry professionals who bring hands-on expertise. Learn, grow,
+              and succeed with cutting-edge tools and mentorship tailored for
+              today’s competitive tech landscape.
             </p>
             <button
               type="button"
@@ -62,13 +64,13 @@ function Features() {
               Customization
             </h3>
             <p className="text-sm text-gray-600">
-              Tailor our product to suit your needs.
+              Tailored solutions to fit your unique needs.
             </p>
           </div>
           <div className="bg-white p-6 shadow rounded-md">
             <h3 className="text-gray-800 text-xl font-bold mb-2">Support</h3>
             <p className="text-sm text-gray-600">
-              24/7 customer support for all your inquiries.
+              10:00 AM to 06:00 PM support for all your inquiries. (Saturday- Sunday off)
             </p>
           </div>
           <div className="bg-white p-6 shadow rounded-md">
@@ -76,7 +78,7 @@ function Features() {
               Performance
             </h3>
             <p className="text-sm text-gray-600">
-              Experience blazing-fast performance with our product.
+              Optimized results through speed, reliability, and efficiency.
             </p>
           </div>
         </div>
@@ -84,5 +86,4 @@ function Features() {
     </div>
   );
 }
-
 export default Features;

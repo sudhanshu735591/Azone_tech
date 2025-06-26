@@ -1,3 +1,4 @@
+import Experience_and_Doubt from "../doubt_experience"
 import Footer from "../Footer"
 import Header from "../Header"
 import Body from "./Body"
@@ -9,6 +10,7 @@ function Home(){
             <Header/>
             <div className="lg:p-0">
                 <Body/>
+                <Experience_and_Doubt/>
                 <Features/>
             </div>
             
