@@ -1,23 +1,39 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [nav, setNav] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [showHeader, setShowHeader] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY <= 10) {
+        // At top of page
         setScrolled(false);
+        setShowHeader(true);
+      } else {
+        setScrolled(true);
+        // Scrolling down
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setShowHeader(false);
+        } 
+        // Scrolling up
+        else if (currentScrollY < lastScrollY) {
+          setShowHeader(true);
+        }
       }
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -28,7 +44,14 @@ function Header() {
   ];
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-[rgb(8,24,35)] shadow-lg" : "bg-[rgba(8,24,35,0.9)]"}`}>
+    <header 
+      ref={headerRef}
+      className={`fixed w-full z-50 transition-all duration-500 ease-in-out transform ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      } ${
+        scrolled ? "bg-[rgba(8,24,35,0.9)] backdrop-blur-sm shadow-lg" : "bg-transparent"
+      }`}
+    >
       <nav className="border-gray-200 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-lg relative">
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
