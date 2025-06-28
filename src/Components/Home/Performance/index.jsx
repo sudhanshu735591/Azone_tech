@@ -1,8 +1,12 @@
 import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 function Performance() {
   const services = [
     {
-      step: "GRADUATE SCHOLORS",
+      step: "GRADUATE SCHOLARS",
       imageUrl:
         "https://images.unsplash.com/photo-1632733711679-529326f6db12?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
@@ -20,63 +24,143 @@ function Performance() {
         "We aim to empower senior secondary (10+2) students or diploma from underprivileged backgrounds by providing essential skill development before they pursue professional courses, whether under the CBSE or ICSE board. This specially designed program is completely free for students from minority communities with a family income below ₹2 LPA, ensuring that financial constraints do not hinder their educational growth and future opportunities.",
     },
   ];
-  return (
-    <div className="font-[sans-serif] text-blue-600  py-8 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="md:text-4xl text-3xl font-bold md:!leading-[55px] uppercase">
-          Our Curriculum Pathways :-
-        </h2>
-        <p className="mt-6 text-md leading-relaxed text-black">
-          Experience a symphony of knowledge as we curate tech-learning
-          masterpieces designed to ignite your curiosity. Our courses,
-          meticulously crafted with passion and precision, promise to transform
-          your educational journey into a dynamic and empowering adventure at
-          AZONE.
-        </p>
-      </div>
-      <section className="mx-auto pb-10 mt-10">
-        <div className="mx-auto flex px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-          <div className="flex justify-center w-full flex-col gap-12">
-            <div className="flex flex-wrap lg:flex-nowrap lg:gap-20 gap-6 w-full">
-              {services.map((service, index) => (
-                <div key={index} className="group min-h-[20rem] w-full">
-                  <div className="relative bg-[#DEE2E5] h-full w-full rounded-2xl text-black shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
 
+  // Animation controls
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { rotateY: 0 },
+    visible: { rotateY: 0 },
+    flipped: { rotateY: 180 },
+  };
+
+  return (
+    <div className="font-[sans-serif] text-blue-600 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={containerVariants}
+        className="max-w-7xl mx-auto"
+      >
+        <motion.div variants={itemVariants} className="max-w-4xl mx-auto text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4 text-blue-900">
+            Our <span className="text-yellow-600">Curriculum</span> Pathways
+          </h2>
+          <div className="w-24 h-1.5 bg-yellow-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-lg sm:text-xl md:text-xl text-gray-700 leading-relaxed">
+            Experience a symphony of knowledge as we curate tech-learning
+            masterpieces designed to ignite your curiosity. Our courses,
+            meticulously crafted with passion and precision, promise to transform
+            your educational journey into a dynamic and empowering adventure at
+            AZONE.
+          </p>
+        </motion.div>
+
+        <motion.section variants={itemVariants} className="mx-auto pb-12 sm:pb-16 md:pb-20">
+          <div className="mx-auto px-2 sm:px-4 lg:px-6 max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+              {services.map((service, index) => (
+                <motion.div 
+                  key={index} 
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02 }}
+                  className="group min-h-[20rem] sm:min-h-[24rem] md:min-h-[26rem] w-full perspective-1000"
+                >
+                  <motion.div 
+                    className="relative h-full w-full rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 [transform-style:preserve-3d]"
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover="flipped"
+                  >
                     {/* Front Side */}
-                    <div className="absolute text-blue-600 font-semibold text-2xl sm:text-2xl md:text-3xl lg:text-2xl font-montserrat flex flex-col items-center justify-center inset-0 h-full w-full rounded-xl text-center px-4 sm:px-6 [backface-visibility:hidden]">
-                      <span className="md:text-2xl">{service.step}</span>
-                      <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl mt-4 text-[#1F2937] font-normal leading-relaxed">
+                    <motion.div 
+                      className="absolute inset-0 bg-gradient-to-br from-blue-100 to-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden] border-2 border-blue-100"
+                      style={{
+                        backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundBlendMode: 'overlay'
+                      }}
+                    >
+                      <div className="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        {index === 0 ? "For Graduates" : "For 10+2 Students"}
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl md:text-3xl font-bold text-blue-900 mb-4 sm:mb-6">
+                        {service.step}
+                      </h3>
+                      <p className="text-base sm:text-lg md:text-lg text-gray-700 leading-relaxed mb-6">
                         {service.description}
-                      </h1>
-                    </div>
+                      </p>
+                      <div className="absolute bottom-6 text-sm text-blue-600 font-medium flex items-center">
+                        <span>Learn more</span>
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </motion.div>
 
                     {/* Back Side */}
-                    <div className="absolute inset-0 h-full w-full rounded-2xl bg-[#111827] px-6 sm:px-10 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                      <div className="flex min-h-full flex-col items-center justify-center py-6">
-                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
-                          {service.name}
-                        </h2>
-                        <p className="text-sm sm:text-base md:text-lg text-left mb-4 leading-relaxed">
+                    <motion.div className="absolute inset-0 h-full w-full rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-800 to-blue-600 p-6 sm:p-8 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center border-2 border-blue-700">
+                      <div className="overflow-y-auto max-h-full">
+                        <h3 className="text-xl sm:text-2xl md:text-2xl font-bold mb-4 sm:mb-6">
+                          {service.step}
+                        </h3>
+                        <p className="text-sm sm:text-base md:text-base text-blue-100 text-left mb-6 leading-relaxed">
                           {service.backtext}
                         </p>
-                        <a href="tel:5555555555" className="inline-flex">
-                          <button className="mt-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
-                            <span>Enroll Now</span>
+                        <a href="#enroll" className="inline-block mt-2 sm:mt-4">
+                          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-6 sm:py-3 sm:px-8 rounded-full inline-flex items-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-500/30">
+                            <span className="text-sm sm:text-base font-semibold">Enroll Now</span>
                             <WrenchScrewdriverIcon className="h-5 w-5 ml-2" />
                           </button>
                         </a>
                       </div>
-                    </div>
-
-                  </div>
-                </div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
+        </motion.section>
+      </motion.div>
     </div>
   );
 }
+
 export default Performance;
