@@ -1,5 +1,5 @@
 import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -24,6 +24,18 @@ function Performance() {
         "We aim to empower senior secondary (10+2) students or diploma from underprivileged backgrounds by providing essential skill development before they pursue professional courses, whether under the CBSE or ICSE board. This specially designed program is completely free for students from minority communities with a family income below ₹2 LPA, ensuring that financial constraints do not hinder their educational growth and future opportunities.",
     },
   ];
+
+  // State to track flipped cards
+  const [flippedCards, setFlippedCards] = useState([]);
+
+  // Toggle flip state
+  const toggleFlip = (index) => {
+    if (flippedCards.includes(index)) {
+      setFlippedCards(flippedCards.filter(i => i !== index));
+    } else {
+      setFlippedCards([...flippedCards, index]);
+    }
+  };
 
   // Animation controls
   const controls = useAnimation();
@@ -160,15 +172,15 @@ function Performance() {
                 <motion.div 
                   key={index} 
                   variants={itemVariants}
-                  whileHover={{ scale: 1.02 }}
                   className="group min-h-[20rem] sm:min-h-[24rem] md:min-h-[26rem] w-full perspective-1000"
                 >
                   <motion.div 
-                    className="relative h-full w-full rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 [transform-style:preserve-3d]"
+                    className="relative h-full w-full rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 [transform-style:preserve-3d] cursor-pointer"
                     variants={cardVariants}
                     initial="hidden"
-                    animate="visible"
-                    whileHover="flipped"
+                    animate={flippedCards.includes(index) ? "flipped" : "visible"}
+                    onHoverStart={() => toggleFlip(index)}
+                    whileHover={{ scale: 1.02 }}
                   >
                     {/* Front Side */}
                     <motion.div 
