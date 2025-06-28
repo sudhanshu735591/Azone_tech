@@ -413,33 +413,3 @@ function About() {
   );
 }
 export default About;
-
-// What services do you offer?
-// We provide a range of solutions, including web design, development, security, and performance optimization tailored to your business needs.
-
-// How secure is my data with your services?
-// Your data is 100% secure. We use advanced encryption, regular monitoring, and strict compliance measures to safeguard your information.
-
-// Can I customize your solutions to fit my needs?
-// Absolutely! Our services are designed to be flexible, allowing full customization to match your unique business requirements.
-
-// Do you offer support after implementation?
-// Yes, we provide ongoing support to ensure everything runs smoothly and any issues are resolved promptly.
-
-// How can I get started?
-// Simply contact us through our website or reach out to our support team. We’ll guide you through the entire process.
-
-// What industries do you serve?
-// Our solutions cater to a variety of industries, including retail, technology, healthcare, finance, and more.
-
-// Are your services scalable for growing businesses?
-// Yes, our solutions are designed to grow with your business, ensuring scalability and adaptability as your needs evolve.
-
-// How do you ensure performance optimization?
-// We use advanced tools and strategies to analyze and enhance system performance, ensuring speed, reliability, and efficiency.
-
-// Do you offer a demo or trial period?
-// Yes, we provide demos or trials for certain services to help you evaluate our solutions before committing.
-
-// What makes your solutions different from others?
-// Our focus on innovation, customization, and exceptional customer support sets us apart, delivering unmatched value to your business.
