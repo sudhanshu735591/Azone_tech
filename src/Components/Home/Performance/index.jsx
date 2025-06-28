@@ -23,10 +23,10 @@ function Performance() {
   return (
     <div className="font-[sans-serif] text-blue-600  py-8 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="md:text-5xl text-3xl font-bold md:!leading-[55px] uppercase">
+        <h2 className="md:text-4xl text-3xl font-bold md:!leading-[55px] uppercase">
           Our Curriculum Pathways :-
         </h2>
-        <p className="mt-6 text-sm leading-relaxed text-black">
+        <p className="mt-6 text-md leading-relaxed text-black">
           Experience a symphony of knowledge as we curate tech-learning
           masterpieces designed to ignite your curiosity. Our courses,
           meticulously crafted with passion and precision, promise to transform
@@ -35,34 +35,39 @@ function Performance() {
         </p>
       </div>
       <section className="mx-auto pb-10 mt-10">
-        <div className="mx-auto flex px-4 lg:max-w-7xl">
-          <div className="flex justify-center object-center w-full flex-col gap-12 ">
-            <div className="flex flex-wrap lg:flex-nowrap lg:gap-20 space-y-5  w-full md:space-y-0 ">
-              {services.map((service) => (
-                <div key={service.name} className="group h-96 w-full ">
+        <div className="mx-auto flex px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+          <div className="flex justify-center w-full flex-col gap-12">
+            <div className="flex flex-wrap lg:flex-nowrap lg:gap-20 gap-6 w-full">
+              {services.map((service, index) => (
+                <div key={index} className="group min-h-[20rem] w-full">
                   <div className="relative bg-[#DEE2E5] h-full w-full rounded-2xl text-black shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                    <div className="absolute text-blue-600 font-semibold text-3xl md:text-4xl font-montserrat flex flex-col items-center justify-center inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
-                      {`${service.step}`}
-                      <h1 className="text-2xl p-5 text-[#1F2937] font-normal text-center">
+
+                    {/* Front Side */}
+                    <div className="absolute text-blue-600 font-semibold text-2xl sm:text-2xl md:text-3xl lg:text-2xl font-montserrat flex flex-col items-center justify-center inset-0 h-full w-full rounded-xl text-center px-4 sm:px-6 [backface-visibility:hidden]">
+                      <span className="md:text-2xl">{service.step}</span>
+                      <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl mt-4 text-[#1F2937] font-normal leading-relaxed">
                         {service.description}
                       </h1>
                     </div>
-                    <div className="absolute inset-0 h-full w-full rounded-2xl bg-[#111827] px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                      <div className="flex min-h-full flex-col items-center justify-center">
-                        <h2 className="text-2xl font-bold mb-4">
+
+                    {/* Back Side */}
+                    <div className="absolute inset-0 h-full w-full rounded-2xl bg-[#111827] px-6 sm:px-10 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                      <div className="flex min-h-full flex-col items-center justify-center py-6">
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
                           {service.name}
                         </h2>
-                        <p className="text-lg text-pretty text-center mb-4 text-start">
+                        <p className="text-sm sm:text-base md:text-lg text-left mb-4 leading-relaxed">
                           {service.backtext}
                         </p>
                         <a href="tel:5555555555" className="inline-flex">
-                          <button className="my-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-4 w-auto rounded-full inline-flex items-center">
+                          <button className="mt-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
                             <span>Enroll Now</span>
-                            <WrenchScrewdriverIcon className="h-6 w-6 ml-2" />
+                            <WrenchScrewdriverIcon className="h-5 w-5 ml-2" />
                           </button>
                         </a>
                       </div>
                     </div>
+
                   </div>
                 </div>
               ))}
@@ -70,6 +75,7 @@ function Performance() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
