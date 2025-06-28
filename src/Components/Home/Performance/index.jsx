@@ -68,27 +68,89 @@ function Performance() {
     flipped: { rotateY: 180 },
   };
 
+  // Floating text animation variants
+  const floatingVariants = {
+    float: {
+      y: ["0%", "-10%", "0%"],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      },
+    },
+    floatFast: {
+      y: ["0%", "-15%", "0%"],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      },
+    },
+    floatSlow: {
+      y: ["0%", "-5%", "0%"],
+      transition: {
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="font-[sans-serif] text-blue-600 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <div className="font-[sans-serif] text-blue-600 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Floating decorative elements */}
+      <motion.div 
+        className="absolute top-20 left-10 text-6xl opacity-10 text-blue-400"
+        variants={floatingVariants}
+        animate="floatSlow"
+      >
+        &lt;/&gt;
+      </motion.div>
+      <motion.div 
+        className="absolute bottom-20 right-10 text-5xl opacity-10 text-yellow-500"
+        variants={floatingVariants}
+        animate="float"
+      >
+        { }
+      </motion.div>
+      <motion.div 
+        className="absolute top-1/3 right-1/4 text-4xl opacity-10 text-blue-300"
+        variants={floatingVariants}
+        animate="floatFast"
+      >
+        { }
+      </motion.div>
+
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={containerVariants}
-        className="max-w-7xl mx-auto"
+        className="max-w-7xl mx-auto relative z-10"
       >
         <motion.div variants={itemVariants} className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4 text-blue-900">
+          <motion.h2 
+            className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4 text-blue-900"
+            variants={floatingVariants}
+            animate="floatSlow"
+          >
             Our <span className="text-yellow-600">Curriculum</span> Pathways
-          </h2>
+          </motion.h2>
           <div className="w-24 h-1.5 bg-yellow-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg sm:text-xl md:text-xl text-gray-700 leading-relaxed">
+          <motion.p 
+            className="text-lg sm:text-xl md:text-xl text-gray-700 leading-relaxed"
+            variants={floatingVariants}
+            animate="float"
+          >
             Experience a symphony of knowledge as we curate tech-learning
             masterpieces designed to ignite your curiosity. Our courses,
             meticulously crafted with passion and precision, promise to transform
             your educational journey into a dynamic and empowering adventure at
             AZONE.
-          </p>
+          </motion.p>
         </motion.div>
 
         <motion.section variants={itemVariants} className="mx-auto pb-12 sm:pb-16 md:pb-20">
@@ -121,35 +183,60 @@ function Performance() {
                       <div className="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                         {index === 0 ? "For Graduates" : "For 10+2 Students"}
                       </div>
-                      <h3 className="text-2xl sm:text-3xl md:text-3xl font-bold text-blue-900 mb-4 sm:mb-6">
+                      <motion.h3 
+                        className="text-2xl sm:text-3xl md:text-3xl font-bold text-blue-900 mb-4 sm:mb-6"
+                        variants={floatingVariants}
+                        animate="floatSlow"
+                      >
                         {service.step}
-                      </h3>
-                      <p className="text-base sm:text-lg md:text-lg text-gray-700 leading-relaxed mb-6">
+                      </motion.h3>
+                      <motion.p 
+                        className="text-base sm:text-lg md:text-lg text-gray-700 leading-relaxed mb-6"
+                        variants={floatingVariants}
+                        animate="float"
+                      >
                         {service.description}
-                      </p>
-                      <div className="absolute bottom-6 text-sm text-blue-600 font-medium flex items-center">
+                      </motion.p>
+                      <motion.div 
+                        className="absolute bottom-6 text-sm text-blue-600 font-medium flex items-center"
+                        variants={floatingVariants}
+                        animate="floatFast"
+                      >
                         <span>Learn more</span>
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </div>
+                      </motion.div>
                     </motion.div>
 
                     {/* Back Side */}
                     <motion.div className="absolute inset-0 h-full w-full rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-800 to-blue-600 p-6 sm:p-8 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center border-2 border-blue-700">
                       <div className="overflow-y-auto max-h-full">
-                        <h3 className="text-xl sm:text-2xl md:text-2xl font-bold mb-4 sm:mb-6">
+                        <motion.h3 
+                          className="text-xl sm:text-2xl md:text-2xl font-bold mb-4 sm:mb-6"
+                          variants={floatingVariants}
+                          animate="floatSlow"
+                        >
                           {service.step}
-                        </h3>
-                        <p className="text-sm sm:text-base md:text-base text-blue-100 text-left mb-6 leading-relaxed">
+                        </motion.h3>
+                        <motion.p 
+                          className="text-sm sm:text-base md:text-base text-blue-100 text-left mb-6 leading-relaxed"
+                          variants={floatingVariants}
+                          animate="float"
+                        >
                           {service.backtext}
-                        </p>
-                        <a href="#enroll" className="inline-block mt-2 sm:mt-4">
+                        </motion.p>
+                        <motion.a 
+                          href="#enroll" 
+                          className="inline-block mt-2 sm:mt-4"
+                          variants={floatingVariants}
+                          animate="floatFast"
+                        >
                           <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-6 sm:py-3 sm:px-8 rounded-full inline-flex items-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-500/30">
                             <span className="text-sm sm:text-base font-semibold">Enroll Now</span>
                             <WrenchScrewdriverIcon className="h-5 w-5 ml-2" />
                           </button>
-                        </a>
+                        </motion.a>
                       </div>
                     </motion.div>
                   </motion.div>
