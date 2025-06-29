@@ -7,8 +7,14 @@ function Body() {
   // Animation controls
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [headingRef, headingInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [contentRef, contentInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [headingRef, headingInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [contentRef, contentInView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
 
   useEffect(() => {
     if (inView) controls.start("visible");
@@ -19,7 +25,7 @@ function Body() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 }
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -28,7 +34,7 @@ function Body() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -36,7 +42,7 @@ function Body() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -48,9 +54,9 @@ function Body() {
         duration: 4,
         repeat: Infinity,
         repeatType: "mirror",
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   // Floating text animation variants
@@ -61,8 +67,8 @@ function Body() {
         duration: 6,
         repeat: Infinity,
         repeatType: "reverse",
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
     floatFast: {
       y: ["0%", "-8%", "0%"],
@@ -70,8 +76,8 @@ function Body() {
         duration: 4,
         repeat: Infinity,
         repeatType: "reverse",
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
     floatSlow: {
       y: ["0%", "-3%", "0%"],
@@ -79,8 +85,8 @@ function Body() {
         duration: 8,
         repeat: Infinity,
         repeatType: "reverse",
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
   };
 
@@ -91,28 +97,28 @@ function Body() {
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvC2-d8DaDJ-xTEsUznR9wdJ9O0pWU8sQsjA&s"
         alt="Background"
       />
-      
+
       {/* Floating decorative elements */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/4 left-10 text-4xl opacity-20 text-blue-400"
         variants={floatingVariants}
         animate="floatSlow"
       >
         &lt;/&gt;
       </motion.div>
-      <motion.div 
+      <motion.div
         className="absolute bottom-1/3 right-10 text-5xl opacity-20 text-yellow-500"
         variants={floatingVariants}
         animate="float"
       >
-        { }
+        {}
       </motion.div>
-      <motion.div 
+      <motion.div
         className="absolute top-1/3 right-1/4 text-3xl opacity-20 text-blue-300"
         variants={floatingVariants}
         animate="floatFast"
       >
-        { }
+        {}
       </motion.div>
 
       <div className="relative p-5 w-full bg-white/80 backdrop-blur-md">
@@ -145,17 +151,14 @@ function Body() {
           variants={containerVariants}
           className="flex flex-col-reverse lg:flex-row items-center gap-10 mt-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8"
         >
-          <motion.div
-            variants={slideUpVariants}
-            className="w-full lg:w-1/2"
-          >
+          <motion.div variants={slideUpVariants} className="w-full lg:w-1/2">
             <motion.p
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: {
                   opacity: 1,
                   y: 0,
-                  transition: { staggerChildren: 0.05, delayChildren: 0.3 }
+                  transition: { staggerChildren: 0.05, delayChildren: 0.3 },
                 },
               }}
               className="text-base sm:text-lg lg:text-xl text-black leading-relaxed"
@@ -163,23 +166,23 @@ function Body() {
               {`At AZONE, we are committed to making high-quality education in software and technology accessible to everyone, regardless of their background or financial situation. That's why we offer completely free programs for minorities. Our courses are carefully structured to cater to both beginners and aspiring experts, covering everything from basic programming to advanced development techniques. We aim to democratize tech education and create equal opportunities for all learners. Whether you're just starting your journey in tech or looking to enhance your existing knowledge, AZONE provides industry-relevant, hands-on learning experiences at no cost. We focus on real-world skills that employers value, ensuring that every learner is well-prepared for the job market.
 
 Join AZONE and unlock your potential in the world of technology—without any cost holding you back.`
-                .split('\n\n')
+                .split("\n\n")
                 .map((paragraph, i) => (
                   <motion.span
                     key={i}
                     variants={{
                       hidden: { opacity: 0, y: 10 },
-                      visible: { 
-                        opacity: 1, 
+                      visible: {
+                        opacity: 1,
                         y: 0,
                       },
                     }}
                     className="block mb-4"
                   >
-                    <motion.span 
-                      variants={floatingVariants} 
+                    <motion.span
+                      variants={floatingVariants}
                       animate="float"
-                      style={{ display: 'inline-block' }}
+                      style={{ display: "inline-block" }}
                     >
                       {paragraph}
                     </motion.span>
@@ -202,7 +205,7 @@ Join AZONE and unlock your potential in the world of technology—without any co
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-16 bg-gray-200"></div>
               </div>
             </div>
-            
+
             {/* Swinging Image */}
             <motion.div
               className="relative"
@@ -220,23 +223,23 @@ Join AZONE and unlock your potential in the world of technology—without any co
                 alt="Azone"
                 style={{ boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}
               />
-              
+
               {/* Frame around the image */}
               <div className="absolute inset-0 border-4 border-yellow-400 rounded-2xl pointer-events-none"></div>
             </motion.div>
-            
+
             {/* Shadow effect */}
-            <motion.div 
+            <motion.div
               className="w-3/4 h-4 bg-black/10 blur-md rounded-full mt-4"
               animate={{
                 scaleX: [0.8, 1, 0.8],
-                opacity: [0.6, 0.8, 0.6]
+                opacity: [0.6, 0.8, 0.6],
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
                 repeatType: "mirror",
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             />
           </motion.div>
@@ -245,5 +248,4 @@ Join AZONE and unlock your potential in the world of technology—without any co
     </div>
   );
 }
-
 export default Body;

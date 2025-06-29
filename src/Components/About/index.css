@@ -1,28 +1,40 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes float {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  20% {
+  0%, 100% {
     transform: translateY(0);
-    opacity: 1;
   }
-  80% {
-    transform: translateY(0);
-    opacity: 1;
+  50% {
+    transform: translateY(-10px);
   }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
+}
+
+@keyframes bounceHorizontal {
+  0%, 100% {
+    transform: translateX(0);
   }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .animate-float {
-  animation: float 5s ease-in-out forwards;
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Optional: Add a bounce effect when hovering the close button */
-.bg-blue-600 button:hover {
-  transform: scale(1.2);
-  transition: transform 0.2s ease;
+.animate-bounce-horizontal {
+  animation: bounceHorizontal 1.5s ease-in-out infinite;
 }

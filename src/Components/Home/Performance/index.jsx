@@ -112,7 +112,7 @@ function Performance() {
   };
 
   return (
-    <div className="font-[sans-serif] text-blue-600 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="font-[sans-serif] text-blue-600   relative overflow-hidden">
       {/* Floating decorative elements */}
       <motion.div 
         className="absolute top-20 left-10 text-6xl opacity-10 text-blue-400"
@@ -203,7 +203,7 @@ function Performance() {
                         {service.step}
                       </motion.h3>
                       <motion.p 
-                        className="text-base sm:text-lg md:text-lg text-gray-700 leading-relaxed mb-6"
+                        className="text-base sm:text-lg md:text-2xl text-gray-700 leading-relaxed mb-6"
                         variants={floatingVariants}
                         animate="float"
                       >
