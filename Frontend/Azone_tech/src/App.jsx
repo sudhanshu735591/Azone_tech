@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import "./index.css"
-import Header from './components/Header';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Services from './components/Services';
-import Career from './components/Career';
-
+import About from './component/About';
+import Services from './component/Services';
+import Home from './component/Home';
+import Contact from './component/Contact';
+import Career from './component/Career';
 function App() {
   return (
     <>
